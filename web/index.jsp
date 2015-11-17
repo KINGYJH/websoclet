@@ -89,7 +89,8 @@
         // 使昵称框获取焦点
         $('#nickname')[0].focus();
 
-        var socket = new WebSocket('ws://192.168.0.9:8080/websocket.ws');
+        //服务器地址
+        var socket = new WebSocket('ws://127.0.0.1:8080/websocket.ws');
 
         socket.onmessage = function(event) {
             addMessage(event.data);
